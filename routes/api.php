@@ -24,6 +24,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+Route::get('/docs/get/', [ App\Http\Controllers\DocsController::class, 'get' ]);
+Route::post('/docs/get/', [ App\Http\Controllers\DocsController::class, 'get' ]);
 Route::get('/departments/get/', [ DepartmentsController::class, 'get' ]);
 Route::get('/persons/get/', [ PersonsController::class, 'get' ]);
 Route::get('/reports/get/', [ ReportsController::class, 'get' ]);
